@@ -1,0 +1,51 @@
+body {
+    background-color: #2b4d59;
+}
+
+header{
+    text-align: center;
+    color: white;
+    background: rgb(57,153,142);
+    background: radial-gradient(circle, rgba(57,153,142,1) 13%, rgba(255,220,124,1) 46%, rgba(255,170,103,1) 62%);
+    font-family: 'Fredoka One', cursive;
+}
+
+header a {
+    color: white;
+    text-align: center;  
+    font-family: 'Lato', sans-serif; 
+}
+main {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card.one {
+    background-color: rgba(57,153,142,1);
+}
+.card.two {
+    background-color: #ffdc7c;
+}
+.card.three {
+    background-color: #ffaa67;
+}
+.card.four {
+    background-color: #da674a;
+}
+
+.card{
+    color: white;
+}
+.card a {
+    background-color: white;
+    color: rgb(57,153,142);
+}
+
+.modal {
+    color: black;
+}
+
+.side_button {
+    background-color: white;
+    text-align: center;
+    color: #2b4d59;
+}
