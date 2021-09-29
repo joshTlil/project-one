@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Server Side APIs</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:ital,wght@1,700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./assets/css/index.css" />
-      </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Server Side APIs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:ital,wght@1,700&family=Montserrat:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
 
-    <body>
-        <header>
-            <h1>Server Side Station </h1>
-            <div class="container d-flex justify-content-center">
-                <nav class="navbar navbar-expand-lg ">
-                  <a class="navbar-brand" href="./index.html">Home</a>
-                  <a class="navbar-brand" href="./documentation.html">Documentation</a>
-                  <a class="navbar-brand" href="./tutorial.html">Tutorial</a>
-                  <a class="navbar-brand" href="./demo.html">Demo</a>
-                </nav>
-              </div>
-        </header>
+<body>
+    <header>
+        <h1>Server Side Station </h1>
+        <div class="container d-flex justify-content-center">
+            <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="./index.html">Home</a>
+                <a class="navbar-brand" href="./documentation.html">Documentation</a>
+                <a class="navbar-brand" href="./tutorial.html">Tutorial</a>
+                <a class="navbar-brand" href="./demo.html">Demo</a>
+            </nav>
+        </div>
+    </header>
 
 
-        <main class="d-flex flex-row">
-            <section class="side col">
-                <aside>
-                    <h5>
-                    <button type="button" class=" side_button btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Saved Section</button>
-                    </h5>
+    <main class="d-flex flex-row">
+        <section class="side col">
+            <aside>
+                <h5>
+                    <button type="button" class=" side_button btn btn-primary" data-toggle="modal"
+                        data-target="#exampleModal"> Saved Section</button>
+                </h5>
 
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">How to use this feature!</h5>
@@ -44,36 +48,77 @@
                                 </button>
                             </div>
                             <div class="modal-body">
-                                <p> Click on any header and a button will save here for you to click and jump back to that same section.</p>
+                                <p> Click on any header and a button will save here for you to click and jump back to
+                                    that same section.</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             </div>
                         </div>
-                        </div>
-                    </div>
-                </aside>
-            </section>
-
-            <section class="cards col-11">
-
-
-                <div class="card three">
-                    <div class="card-body">
-                    <h5 class="card-title">API Tutorial</h5>
-                    <img src="./assets/images/generic-image-placeholder.png" alt="placeholder"/>
-                    <p class="card-text">On this page we will go through the steps of getting and using data from an API. It explains and shows the coding process.</p>
                     </div>
                 </div>
-                <hr>
+            </aside>
+        </section>
 
-             </section>
+        <section class="cards col-11">
 
 
-        </main>
-    </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+
+            <div class="card three">
+                <div class="card-body">
+                    <h5 class="card-title">API Demo</h5>
+                    <img src="./assets/images/generic-image-placeholder.png" alt="placeholder" />
+                    <p class="card-text">On this page we will go through the steps of getting and using data from an
+                        API. It explains and shows the coding process.</p>
+                    <!--Needs screenshot-->
+                    <p class="card-text">First you need to get the random generated API Key from the website to gain
+                        authorize to the sites data </p>
+                    <!--Screenshot-->
+                    <!--Quiz question here-->
+                    <p class="card-text">Next you need to go the sites documentation page and see how to utilize the URL
+                        and the API Key </p>
+
+                    <p class="card-text">Open up your javascript and create a variable that will hold your API Key</p>
+                    <!--Quiz question-->
+                    <p class="card-text">Next you will need to make another variable, this variable will hold your URL
+                        with the API key and information your that you want to fetch </p>
+                    <!--Screenshot here-->
+                    <p class="clas-text">Now that you have that you need to make a fetch function with the variable URL
+                        in the parameter</p>
+                    <!--Screenshot here-->
+                    <p class="class-text">Next you will create a promise which will be called (.then) and in that
+                        promise you will make another function with response in that parameter, next to the parameter
+                        you're going to create {}</p>
+                    <!--Screenshot here-->
+                    <p class="class-text">Inside the {} your are going to make the response return as a .json so it can
+                        easily manipulate the data as an array</p>
+                    <!--3 screenshots here-->
+                    <p class="class-text">Now you need to make another promise .then next to the new function with data
+                        in the parameter,
+                        if you want to see if the data went through you can console.log the data and you can look in the
+                        console on you html page
+                    </p>
+                    <!--Screenshot of the for loop -->
+                    <p class="class-text">Now that you have the data you will need to make a for loop with the data </p>
+                    <!--Screenshot-->
+                    <p class="class-text">Now that you have the data you will want to push the data to the page you want
+                        to create two new variables and and element that equal to each other</p>
+                    <!--screenshot-->
+                    <p class="class-text">After you done that you can use the data with the incrament and the data type
+                        you want to use</p>
+                    <!--screenshot-->
+                    <p class="class-text">Now you can append the new variables to your html page</p>
+                </div>
+                
+
+        </section>
+
+
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="./assets/js/script.js"></script>
+
 </html>
