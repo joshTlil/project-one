@@ -34,7 +34,7 @@ main {
 
 .card{
     color: white;
-    text-shadow: 0px 0px 5px black;
+    text-shadow: 0px 0px 2px #2b4d59;
 }
 .card a {
     background-color: white;
@@ -58,4 +58,19 @@ figure{
     width: 75%;
     font-size: small;
     text-align: center;
+}
+
+.quiz {
+    background-color:#2b4d59 ;
+    color: #ffaa67;
+}
+
+.quiz li {
+    background-color:#2b4d59 ;
+    color: #ffaa67;
+}
+
+.quiz button {
+    background-color: #ffaa67;
+    color: #2b4d59;
 }
