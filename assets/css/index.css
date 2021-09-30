@@ -79,6 +79,6 @@ figure{
     background-color: #2b4d59;
 }
 
-.hide {
+.hide1, .hide2, .hide3, .hide4 {
     display: none;
 }
