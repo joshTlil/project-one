@@ -113,17 +113,19 @@
                 <div class="card quiz" style="width: 18rem;">
                     <div class="card-body">
                       <h5 class="card-title">API Quiz</h5>
-                      <p class="card-text">Some quick questions to test your knowledge!</p>
+                      <p class=" question card-text">Some quick questions to test your knowledge!</p>
                     </div>
-                    <ul class="list-group list-group-flush">
-                      <li class="list-group-item"> <button> answer</button> </li>
-                      <li class="list-group-item"> <button> answer</button> </li>
-                      <li class="list-group-item"> <button> answer</button> </li>
-                      <li class="list-group-item"> <button> answer</button> </li>
-
+                    <ul class="list-group list-group-flush" style="display: none;">
+                      <li class="list-group-item"> <button class="answer"> answer</button> </li>
+                      <li class="list-group-item"> <button class="answer"> answer</button> </li>
+                      <li class="list-group-item"> <button class="answer"> answer</button> </li>
+                      <li class="list-group-item"> <button class="answer"> answer</button> </li>
                     </ul>
+                    <div>
+                        <button class="start-button"> Start</button>
+                    </div>
                     <div class="card-body">
-                      <p>Correct/Wrong</p>
+                        <p id="indicator" style="display: none;"></p>
                     </div>
                 </div>
             </div>
