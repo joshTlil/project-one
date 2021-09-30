@@ -80,11 +80,22 @@ var = apiKey = {information obtained for key/access}
 </textarea>
                     </code></pre>
                     
-                    <p class="clas-text">Now that you have your variables, you will call your fetch function with the variable URL</p>
+                    <p class="clas-text">Now that you have your variables, the next steps will be to fetch the data and display it to your console.L
+                        <ul>
+                            <li> Next you will create a promise which will be called (.then) and in that
+                                promise you will make another function with response in that parameter, next to the parameter
+                                you're going to create {} </li>
+                            <li>Inside the {} your are going to make the response return as a .json so it can
+                                easily manipulate the data as an array</li>
+                            <li>Now you need to make another promise .then next to the new function with data
+                                in the parameter,
+                                if you want to see if the data went through you can console.log the data and you can look in the
+                                console on you html page</li>
+                        </ul></p>
 
 <pre><code>
 <textarea>
-fetch(requestUrl)
+fetch(apiUrl)
     .then(function (response) {
         return response.json();
     })
@@ -92,19 +103,6 @@ fetch(requestUrl)
         console.log(data)
 </textarea>
 </code></pre>
-
-                    <p class="class-text">Next you will create a promise which will be called (.then) and in that
-                        promise you will make another function with response in that parameter, next to the parameter
-                        you're going to create {}</p>
-
-                    <p class="class-text">Inside the {} your are going to make the response return as a .json so it can
-                        easily manipulate the data as an array</p>
-
-                    <p class="class-text">Now you need to make another promise .then next to the new function with data
-                        in the parameter,
-                        if you want to see if the data went through you can console.log the data and you can look in the
-                        console on you html page
-                    </p>
 
                     <p class="class-text">Now that you have the data you will need to make a for loop with the data </p>
 
