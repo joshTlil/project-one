@@ -11,7 +11,7 @@ var indicator= $("#indicator")
 var quiz = {
     questions: ['Where do you obtain your APIKey','Where in the URL do you start implementing your changes','Why do you need to return as a .json','what is .then'],
 
-    answers: ['Off the website that you are obtaining data on', 'after the ?','To manipulate the data into an array','It is a promise','from my github','after.com','Off the website that you are obtaining data on','after the ?','To manipulate the data into an array','It is a promise'],
+    answers: ['Off the website that you are obtaining data on', 'from my github','To manipulate the data into an array','after.com','from your instructor','It means next','random','after the ?','To manipulate the data into an array','It is a promise','it is a object','To display changes to the html page'],
     correctAns:['Off the website that you are obtaining data on','after the ?','To manipulate the data into an array','It is a promise'],
 }
 console.log(quiz)
