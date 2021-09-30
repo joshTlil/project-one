@@ -9,11 +9,12 @@ var indicator= $("#indicator")
 
 //Quiz object
 var quiz = {
-    questions: ['Where do you obtain your APIKey','Where in the URL do you start implementing your changes','Why do you need to return as a .json','what is .then'
-],
-    answers: [' Randomly off the internet', 'after https://','To turn into a function','It is an array','from my github','after.com','Off the website that you are obtaining data on','after the ?','To manipulate the data into an array','It is a promise'],
+    questions: ['Where do you obtain your APIKey','Where in the URL do you start implementing your changes','Why do you need to return as a .json'],
+
+    answers: ['Off the website that you are obtaining data on', 'after the ?','To manipulate the data into an array','It is an array','from my github','after.com','Off the website that you are obtaining data on','after the ?','To manipulate the data into an array','It is a promise'],
     correctAns:['Off the website that you are obtaining data on','after the ?','To manipulate the data into an array','It is a promise'],
 }
+console.log(quiz)
 
 //start button event listener
 startButton.on("click", function() {
