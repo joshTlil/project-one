@@ -74,10 +74,8 @@
                     <p class="card-text">Open up your javascript and create two variables, one for your API url and the other for the API key.</p>
 
                     <pre><code>
-<textarea>
-var = apiUrl = 'https:enter url site address'
-var = apiKey = {information obtained for key/access}
-</textarea>
+                        var = apiUrl = 'https:enter url site address'
+                        var = apiKey = {information obtained for key/access}
                     </code></pre>
                     
                     <p class="clas-text">Now that you have your variables, the next steps will be to fetch the data and display it to your console.L
@@ -92,37 +90,31 @@ var = apiKey = {information obtained for key/access}
                                 if you want to see if the data went through you can console.log the data and you can look in the
                                 console on you html page</li>
                         </ul></p>
-
-<pre><code>
-<textarea>
-fetch(apiUrl)
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (data) {
-        console.log(data)
-</textarea>
-</code></pre>
+                    <pre><code>
+                        fetch(apiUrl)
+                            .then(function (response) {
+                                return response.json();
+                            })
+                            .then(function (data) {
+                                console.log(data)
+                    </code></pre>
 
                     <p class="class-text">Now that you have the data you will need to make a for loop with the data                         
                         <ul>
                             <li> This for loop section will be nested inside your second .then function </li>
                       </ul></p>
+                    <pre><code>
+                        for (var i = 0; i < data.length; i++) {
+                            // Creating elements, tablerow, tabledata, and anchor
+                            var createTableRow = document.createElement('tr');
+                            var tableData = document.createElement('td');
+                            var link = document.createElement('a');
 
-<pre><code>
-    <textarea>
-for (var i = 0; i < data.length; i++) {
-    // Creating elements, tablerow, tabledata, and anchor
-    var createTableRow = document.createElement('tr');
-    var tableData = document.createElement('td');
-    var link = document.createElement('a');
-
-    // Setting the text of link and the href of the link
-    link.textContent = data[i].html_url;
-    link.href = data[i].html_url;
-}|
-</textarea>
-</code></pre>
+                            // Setting the text of link and the href of the link
+                            link.textContent = data[i].html_url;
+                            link.href = data[i].html_url;
+                        }
+                    </code></pre>
 
                     <p class="class-text">After you done that you can use the data with the increment and the data type
                         you want to use</p>
@@ -131,14 +123,12 @@ for (var i = 0; i < data.length; i++) {
                         <ul>
                             <li> These variables should still be nested inside your 'for loop' before curly brackets closing. </li>
                         </ul></p>
-<pre><code>
-<textarea>
-tableData.appendChild(link);
-createTableRow.appendChild(tableData);
-tableBody.appendChild(createTableRow);
-</textarea>
-</code></pre>                    
-                </div>
+                    <pre><code>
+                        tableData.appendChild(link);
+                        createTableRow.appendChild(tableData);
+                        tableBody.appendChild(createTableRow);
+                    </code></pre>                    
+                    </div>
                 </div>
 
              </section>
