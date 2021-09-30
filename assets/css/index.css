@@ -6,7 +6,7 @@ header{
     text-align: center;
     color: white;
     background: rgb(57,153,142);
-    background: radial-gradient(circle, rgba(57,153,142,1) 13%, rgba(255,220,124,1) 46%, rgba(255,170,103,1) 62%);
+    background: radial-gradient(circle, rgba(57,153,142,1) 13%, #fac635 46%, rgba(255,170,103,1) 62%);
     font-family: 'Fredoka One', cursive;
 }
 
@@ -23,7 +23,7 @@ main {
     background-color: rgba(57,153,142,1);
 }
 .card.two {
-    background-color: #ffdc7c;
+    background-color: #fac635;
 }
 .card.three {
     background-color: #ffaa67;
@@ -33,8 +33,8 @@ main {
 }
 
 .card{
-    color: white;
-    text-shadow: 0px 0px 2px #2b4d59;
+    color: #2b4d59;
+
 }
 .card a {
     background-color: white;
@@ -62,12 +62,11 @@ figure{
 
 .quiz {
     background-color:#2b4d59 ;
-    color: #ffaa67;
+    color: white;
 }
 
 .quiz li {
     background-color:#2b4d59 ;
-    color: #ffaa67;
 }
 
 .quiz button {
@@ -77,8 +76,13 @@ figure{
 
 .docImg {
     background-color: #2b4d59;
+    color: white;
 }
 
 .hide1, .hide2, .hide3, .hide4 {
     display: none;
+}
+
+.start-button {
+    margin-left: 33%;
 }

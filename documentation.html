@@ -17,7 +17,6 @@
     />
     <link rel="stylesheet" href="./assets/css/index.css" />
   </head>
-
   <body>
     <header>
       <h1>Server Side Station</h1>
@@ -30,7 +29,6 @@
         </nav>
       </div>
     </header>
-
     <main class="d-flex flex-row">
       <section class="side col">
         <aside>
@@ -44,7 +42,6 @@
               Saved Section
             </button>
           </h5>
-
           <div
             class="modal fade"
             id="exampleModal"
@@ -88,7 +85,6 @@
           </div>
         </aside>
       </section>
-
       <section class="cards col-11">
         <div class="card two">
           <div class="card-body">
@@ -100,10 +96,21 @@
               two examples of documentation and explain the important parts to
               get started using it. APIs and their documentation aren’t
               standardized, so you may have to search around to figure out how
-              to use it. In general, documentation should tell you which
-              technologies are used (JSON, XML), how to interact (usually a URL,
-              variables, formatting, and examples), what information is
-              available, and usage limits or guidelines.
+              to use it. In general, documentation should tell you:
+               <ul>
+                 <li>
+                  Which technologies are used (JSON, XML)
+                 </li>
+                 <li>
+                  How to interact (usually a URL, variables, formatting, and examples)
+                 </li>
+                 <li>
+                  What information is available
+                 </li>
+                 <li>
+                   Usage limits or guidelines
+                 </li>
+               </ul>
             </p>
             <p class="card-text">
               The first example is
@@ -171,6 +178,21 @@
               the data is “100% free” and it’s only “for personal projects”. As
               we demonstrated, it can sometimes take searching around and
               deduction to get a full understanding of how to work with an API.
+            </p>
+            <p>
+              Next, we’ll look at <a href='https://openweathermap.org/api'>OpenWeather’s API</a>. In contrast to Open Brewery, OpenWeather’s documentation is extensive. There are multiple types of APIs, each with their own documentation. There’s even a “How to Start” guide. In the summary under each API name, you can already determine which technologies are available, what information is available, and some usage limits or guidelines. That's 3 out of 4 things we need to know to get started!
+              <div class='docImg rounded mx-auto p-3 m-3'>
+                <img src='./assets/images/openweather1.png' alt='screenshot of text: shows a sections with different APIs and a short summary of them' class="rounded img-fluid mx-auto d-block">
+              </div>
+            </p>
+            <p>
+               Let's click on the API doc for the One Call API. After a brief introduction, the last thing we need to know to get started, how to interact with the API, is thoroughly answered.
+               <div class='docImg rounded mx-auto p-3 m-3'>
+                <img src='./assets/images/openweather2.png' alt='screenshot of text: How to make an API call with a demo url' class="rounded img-fluid mx-auto d-block">
+              </div>
+            </p>
+            <p>
+              There are thousands of different APIs available to developers with a huge range in documentation quality. Hopefully these two examples give you an idea of how to get the information you need to make your API requests. If all else fails, you can usually find a way to contact the person or organization who created the API and get help directly. Now that you're familiar with how to read the documentation, head over to the <a href='./tutorial.html'>tutorial</a> to learn how to write the code.
             </p>
           </div>
         </div>
