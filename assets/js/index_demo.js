@@ -1,8 +1,13 @@
-var hideBtn = document.querySelector('#hide-btn');
+var showBtn = document.querySelector('#hide-btn');
+var clicked = true;
 
-$(".show-btn").click(function() {
-    if ()
-    $("div").removeClass("hide");
+showBtn.forEach.$('.show-btn').onclick(function() {
+    if (clicked) {
+        $('.switcher').hide();
+    } else if (!clicked) {
+        $('div').hide();
+    }
+    return
 });
 
-// ("drop", {direction: "down"}, "slow");
+// 
