@@ -73,6 +73,12 @@ figure{
 .quiz button {
     background-color: #ffaa67;
     color: #2b4d59;
+}
+
 .docImg {
     background-color: #2b4d59;
+}
+
+.hide {
+    display: none;
 }
