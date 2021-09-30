@@ -104,7 +104,25 @@ fetch(apiUrl)
 </textarea>
 </code></pre>
 
-                    <p class="class-text">Now that you have the data you will need to make a for loop with the data </p>
+                    <p class="class-text">Now that you have the data you will need to make a for loop with the data                         
+                        <ul>
+                            <li> This for loop section will be nested inside your second .then function </li>
+                      </ul></p>
+
+<pre><code>
+    <textarea>
+for (var i = 0; i < data.length; i++) {
+    // Creating elements, tablerow, tabledata, and anchor
+    var createTableRow = document.createElement('tr');
+    var tableData = document.createElement('td');
+    var link = document.createElement('a');
+
+    // Setting the text of link and the href of the link
+    link.textContent = data[i].html_url;
+    link.href = data[i].html_url;
+}|
+</textarea>
+</code></pre>
 
                     <p class="class-text">Now that you have the data you will want to push the data to the page you want
                         to create two new variables and and element that equal to each other</p>
