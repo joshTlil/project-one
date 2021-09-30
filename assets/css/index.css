@@ -59,15 +59,3 @@ figure{
     font-size: small;
     text-align: center;
 }
-
-code textarea {
-    background-color: #eee;
-    border: 1px solid #999;
-    display: block;
-    padding: 20px;
-  }
-
-textarea {
-    width: 80%;
-    height: auto;
-}
