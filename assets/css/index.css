@@ -12,8 +12,8 @@ header{
 
 header a {
     color: white;
-    text-align: center;  
-    font-family: 'Lato', sans-serif; 
+    text-align: center;
+    font-family: 'Lato', sans-serif;
 }
 main {
     font-family: 'Montserrat', sans-serif;
@@ -73,4 +73,6 @@ figure{
 .quiz button {
     background-color: #ffaa67;
     color: #2b4d59;
+.docImg {
+    background-color: #2b4d59;
 }
