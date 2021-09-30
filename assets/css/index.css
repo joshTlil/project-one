@@ -79,6 +79,10 @@ figure{
     color: white;
 }
 
+.hide1, .hide2, .hide3, .hide4 {
+    display: none;
+}
+
 .start-button {
     margin-left: 33%;
 }
