@@ -1,79 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Server Side APIs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:ital,wght@1,700&family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/index.css" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Server Side APIs</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:ital,wght@1,700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./assets/css/index.css" />
-      </head>
+  <body>
+    <header>
+      <h1>Server Side Station</h1>
+      <div class="container d-flex justify-content-center">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="./index.html">Home</a>
+          <a class="navbar-brand" href="./documentation.html">Documentation</a>
+          <a class="navbar-brand" href="./tutorial.html">Tutorial</a>
+          <a class="navbar-brand" href="./demo.html">Demo</a>
+        </nav>
+      </div>
+    </header>
 
-    <body>
-        <header>
-            <h1>Server Side Station </h1>
-            <div class="container d-flex justify-content-center">
-                <nav class="navbar navbar-expand-lg ">
-                  <a class="navbar-brand" href="./index.html">Home</a>
-                  <a class="navbar-brand" href="./documentation.html">Documentation</a>
-                  <a class="navbar-brand" href="./tutorial.html">Tutorial</a>
-                  <a class="navbar-brand" href="./demo.html">Demo</a>
-                </nav>
-              </div>
-        </header>
+    <main class="d-flex flex-row">
+      <section class="side col">
+        <aside>
+          <h5>
+            <button
+              type="button"
+              class="side_button btn btn-primary"
+              data-toggle="modal"
+              data-target="#exampleModal"
+            >
+              Saved Section
+            </button>
+          </h5>
 
-
-        <main class="d-flex flex-row">
-            <section class="side col">
-                <aside>
-                    <h5>
-                    <button type="button" class=" side_button btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Saved Section</button>
-                    </h5>
-
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">How to use this feature!</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p> Click on any header and a button will save here for you to click and jump back to that same section.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </aside>
-            </section>
-
-            <section class="cards col-11">
-
-
-                <div class="card two">
-                        <div class="card-body">
-                        <h5 class="card-title">Documentation</h5>
-                        <img src="./assets/images/generic-image-placeholder.png" alt="placeholder"/>
-                        <p class="card-text"> Each API has its own documentation. On this page we will show you how to read through them and explain what key things are important to look for in these documentations. It also includes a list of free public APIs you can use.</p>
-                        </div>
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    How to use this feature!
+                  </h5>
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
                 </div>
-                <hr>
+                <div class="modal-body">
+                  <p>
+                    Click on any header and a button will save here for you to
+                    click and jump back to that same section.
+                  </p>
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
 
-             </section>
+      <section class="cards col-11">
+        <div class="card two">
+          <div class="card-body">
+            <h5 class="card-title">Documentation</h5>
 
-
-        </main>
-    </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+            <p class="card-text">
+              So you’ve decided to use an API in your site. The next step is to
+              familiarize yourself with the documentation. We will look through
+              two examples of documentation and explain the important parts to
+              get started using it. APIs and their documentation aren’t
+              standardized, so you may have to search around to figure out how
+              to use it. In general, documentation should tell you which
+              technologies are used (JSON, XML), how to interact (usually a URL,
+              variables, formatting, and examples), what information is
+              available, and usage limits or guidelines.
+            </p>
+            <p class="card-text">
+              The first example is
+              <a href="https://www.openbrewerydb.org/">Open Brewery DB</a>. On
+              the main page, it tells us that this is a free dataset.
+              <div class='docImg rounded mx-auto p-3 m-3'>
+                <img src='./assets/images/openbrewery1.png' alt='screenshot of text: about open brewery db is a free dataset and api with public information on breweries, cideries, brewpubs, and bottleshops' class="rounded img-fluid mx-auto d-block">
+              </div>To get
+                started, we’ll navigate to the documentation page. You’ll notice
+                there isn’t much information here, only four links under the
+                heading Endpoints.
+              <div class='docImg rounded mx-auto p-3 m-3'>
+                <img src='./assets/images/openbrewery2.png' alt='screenshot of text: documentation endpoints list breweries link get breweries link search breweries link autocomplete link' class="rounded img-fluid mx-auto d-block">
+              </div> Let’s click the first link and see if we can
+              find out more. Once there, we see a URL and an example output. The
+              output looks a lot like a JavaScript object.
+              <div class='docImg rounded mx-auto p-3 m-3'>
+                <img src='./assets/images/openbrewery3.png' alt='screenshot of text: url to api and code for javascript object' class="rounded img-fluid mx-auto d-block">
+              </div> This is a clue that
+              we can interact with this API using JSON. Now that we’ve
+              identified which technology we can use, let’s look at the URL. It
+              starts with https, that tells us we’ll need to run our JavaScript
+              query on a secure site to avoid issues with Mixed Content. After
+              that it contains the typical subdomain “api”, the domain name is
+              next, and following it is /breweries. So far, we’ve figured out
+              which technology to use (JavaScript) and the URL we’ll need for
+              our fetch method.
+            </p>
+            <p class="class-text">
+              Scrolling down, we see headings with names like “by_[word]” and
+              example URLs. There’s also a note letting us know that spaces can
+              be replaced with underscores or “url encoding”.
+              <div class='docImg rounded mx-auto p-3 m-3'>
+                <img src='./assets/images/openbrewery4.png' alt='screenshot of text: keywords and url examples' class="rounded img-fluid mx-auto d-block">
+              </div> Following the link takes us to a Wikipedia article describing how to replace spaces
+              and other characters with stuff that works in a URL. We’ll ignore
+              all that and take the easier route of replacing spaces with
+              underscores (we are lazy developers after all). The rest of the
+              page shows the different filters you can use when querying the
+              information. Near the bottom, it also lets you know how to sort
+              the incoming information.
+            </p>
+            <p class="class-text">
+              Now that we’ve gotten all the information from that page, let’s
+              check the other ones under documentation to see if there’s
+              anything else we can learn. The Get Brewery and Search Brewery
+              pages each give examples similar to the one we saw on the first
+              page showing how a response for each of those queries would look.
+              On the last documentation page, Autocomplete, we see that there’s
+              a way to retrieve just the id and name of the brewery to use in an
+              autocomplete feature. It also tells us that it will only return 15
+              breweries.
+              <div class='docImg rounded mx-auto p-3 m-3'>
+                <img src='./assets/images/openbrewery5.png' alt='screenshot of text: Return a list of names and ids of breweries based on a search term. This endpoint is typically used for a drop-down selection. Notes: For the query parameter, you can use underscores or url encoding for spaces. The maximum number of breweries returned is 15. Below there is an example of expected return values' class="rounded img-fluid mx-auto d-block">
+              </div>
+            </p>
+            <p class="class-text">
+              That’s all the information from the documentation section. We were
+              able to figure out which technology to use (JSON), how to interact
+              (URLs, search parameters), what information is available (the keys
+              and values of the objects), but other than the Autocomplete
+              section, we didn’t find any usage limits or guidelines. Let’s
+              explore other parts of the site to see if the information is
+              available. On the Frequently Asked Questions page, we find that
+              the data is “100% free” and it’s only “for personal projects”. As
+              we demonstrated, it can sometimes take searching around and
+              deduction to get a full understanding of how to work with an API.
+            </p>
+          </div>
+        </div>
+        <hr />
+      </section>
+    </main>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="./assets/js/script.js"></script>
 </html>
