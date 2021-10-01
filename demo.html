@@ -61,88 +61,147 @@
                 <div class="card four">
                     <div class="card-body">
                     <h5 class="card-title">API Demo</h5>
-                    <img src="./assets/images/generic-image-placeholder.png" alt="placeholder"/>
                     <p class="card-text">On this page we will go through a tutorial for you to get involved and learn hands-on. All you have to do is be on Google Chrome browser and follow our directions.</p>
                 
                     <p class="card-text">If you've followed along from the <a href="./tutorial.html" alt="Link to Tutorial">Tutorial</a> you should be in position to begin practicing some code along with us.
                         <ul>
-                            <li> Received random generated API Key from the website </li>
-                            <li>Accessed sites documentation page to learn how to use the URL and API key</li>
-                            <li>Go to your working Javascript file and be ready to start coding!</li>
-                        </ul></p>
+                            <li> 
+                                Received random generated API Key from the website 
+                            </li>
+                            <li>
+                                Accessed sites documentation page to learn how to use the URL and API key
+                            </li>
+                            <li>
+                                Go to your working JavaScript file and be ready to start coding!
+                            </li>
+                        </ul>
+                    </p>
                     
-                    <p class="card-text">Open up your javascript and create two variables, one for your API url and the other for the API key.</p>
+                    <p class="card-text">Open up your JavaScript and create some variables for your API URL and the API key. We will write these variables to the console log to make sure they are assigned correctly.</p>
 
                     <div class="hide1">
-                        <pre><code>
-                            var = apiUrl = 'https:enter url site address'
-                            var = apiKey = {information obtained for key/access}
-                        </code></pre>
+                    <pre>
+                        <code>
+                            var lat = 33.749;
+                            var lon = -84.388;
+                            var apiKey = 'xxxRandomNumbersAndLettersxxx';
+                            var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&exclude=hourly&units=imperial';
+                            console.log("API URL: " + apiUrl);
+                            console.log("API key: " + apiKey);
+                        </code>
+                    </pre>
                     </div>
-                    <button class='show-btn1'>Compare Here!</button>
+                    <button class='show-btn1 mb-4'>Compare Your Variable Allocation</button>
 
-                    <p class="clas-text">Now that you have your variables, the next steps will be to fetch the data and display it to your console.L
+                    <p class="clas-text">Now that you have your variables, the next steps will be to fetch the data and display it to your console. (We will fetch temperature and wind speed data from OpenWeather and display it in the console when you click the button below as an example.)
                         <ul>
-                            <li> Next you will create a promise which will be called (.then) and in that
-                                promise you will make another function with response in that parameter, next to the parameter
-                                you're going to create {} </li>
-                            <li>Inside the {} your are going to make the response return as a .json so it can
-                                easily manipulate the data as an array</li>
-                            <li>Now you need to make another promise .then next to the new function with data
-                                in the parameter,
-                                if you want to see if the data went through you can console.log the data and you can look in the
-                                console on you html page</li>
-                        </ul></p>
+                            <li> Create a promise which will be called (.then) and in that promise you will make another function with response in that parameter, next to the parameter you're going to create {}.
+                            </li>
+                            <li>
+                                Inside the {} your are going to make the response return as a .json so you can easily manipulate the data as an array.
+                            </li>
+                            <li>
+                                Now you need to make another promise (.then) next to the new function with data
+                                in the parameter, if you want to see whether the data went through you can console.log the returned data and look at it in the console on the page. Open your console log now, and click the button below to see an example.
+                            </li>
+                        </ul>
+                    </p>
                     
                     <div class="hide2">
-                        <pre><code>
+                        <pre>
+                            <code>
+                            var city = 'atlanta';
+                            var apiKey = urlSuffix;
+                            var apiUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=1&appid=' + apiKey;
                             fetch(apiUrl)
                                 .then(function (response) {
                                     return response.json();
                                 })
                                 .then(function (data) {
-                                    console.log(data)
-                        </code></pre>
+                                console.log("Temp: " + Math.round(data.current.temp));
+                                console.log("Wind: " + Math.round(data.current.wind_speed));
+                            });
+                            </code>
+                        </pre>
                     </div>
-                    <button class='show-btn2'>Compare Here!</button>
+                    <button class='show-btn2 mb-4'>Compare Your Fetch Code</button>
 
-                    <p class="class-text">Now that you have the data you will need to make a for loop with the data                         
+                    <p class="class-text">Now that you have verified the data, you will want to make a for loop with the data array to access more of the specific data you want. (We wanted to obtain the temperature and wind speed for the 5 days, so we loop obtain 5 days of data from the array.).                         
                         <ul>
-                            <li> This for loop section will be nested inside your second .then function </li>
-                        </ul></p>
+                            <li>
+                                This for loop section will be nested inside your second .then function 
+                            </li>
+                        </ul>
+                    </p>
 
                     <div class="hide3">
-                        <pre><code>
-                            for (var i = 0; i < data.length; i++) {
-                                // Creating elements, tablerow, tabledata, and anchor
-                                var createTableRow = document.createElement('tr');
-                                var tableData = document.createElement('td');
-                                var link = document.createElement('a');
-
-                                // Setting the text of link and the href of the link
-                                link.textContent = data[i].html_url;
-                                link.href = data[i].html_url;
-                            }
-                        </code></pre>
+                        <pre>
+                            <code>
+                            var lat = 33.749;
+                            var lon = -84.388;
+                            var apiKey = urlSuffix;
+                            var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&exclude=hourly&units=imperial';
+                            fetch(apiUrl)
+                                .then(function (response) {             
+                                    return response.json();
+                                })
+                                .then(function (data) {
+                                for (var i = 0; i &lt 5; i++) {
+                                    console.log("Atlanta: " + i + " day(s) from now Max Temp: " + Math.round(data.daily[i].temp.max));
+                                    console.log("Atlanta: " + i + " day(s) from now Wind Speed: " + Math.round(data.daily[i].wind_speed));
+                                }
+                                });
+                            </code>
+                        </pre>
                     </div>
-                    <button class='show-btn3'>Compare Here!</button>
+                    <button class='show-btn3 mb-4'>Compare Your Loop Function</button>
 
-                    <p class="class-text">After you done that you can use the data with the increment and the data type
-                        you want to use</p>
+                    <p class="class-text">Now, that you have the group of data you want to use/display for your project, you can go ahead and manipulate it to feet your needs. (Using the weather API, below we created a 5 Day forecast placed in cards with imagery.)</p>
 
-                    <p class="class-text">Now you can append the new variables to your html page                        
+                    <p class="class-text">Now you can append your chosen data to your project in html to create your desired outcome.                        
                         <ul>
-                            <li> These variables should still be nested inside your 'for loop' before curly brackets closing. </li>
-                        </ul></p>
+                            <li> 
+                             Note: These changes should still be nested inside your 'for loop' before curly brackets closing. 
+                            </li>
+                        </ul>
+                    </p>
                     
                     <div class="hide4">
-                        <pre><code>
-                            tableData.appendChild(link);
-                            createTableRow.appendChild(tableData);
-                            tableBody.appendChild(createTableRow);
-                        </code></pre>
+                        <pre>
+                            <code>
+                            var lat = 33.749;
+                            var lon = -84.388;
+                            var apiKey = urlSuffix;
+                            var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&exclude=hourly&units=imperial';
+                            fetch(apiUrl)
+                                .then(function (response) {             
+                                    return response.json();
+                                })
+                                .then(function (data) {
+                                for (var i = 0; i &lt 5; i++) {
+                                $("&ltdiv&gt", { class: "col w-20 d-inline-flex" })
+                                .append(
+                                    $(
+                                    "&ltdiv class='card w-20'&gt&ltimg class='card-img-top mw-20' src='https://openweathermap.org/img/wn/" +
+                                        data.daily[i].weather[0].icon +
+                                        "@4x.png' alt='weather icon'&gt&ltdiv class='card-body'&gt&lth5 class='card-title'&gt" +
+                                        moment.unix(data.daily[i].dt).format("M/DD/YYYY") +
+                                        "&lt/h5&gt&ltp class='card-text'&gtTemp: " +
+                                        Math.round(data.daily[i].temp.max) +
+                                        "°F&lt/p&gt&ltp class='card-text'&gtWind: " +
+                                        Math.round(data.daily[i].wind_speed) +
+                                        " MPH&lt/p&gtltp class='card-text'>Humidity: " +
+                                        data.daily[i].humidity +
+                                        "&lt/p&gt&lt/div&gt&lt/div&gt&lt/div&gt"
+                                    )
+                                )
+                                .appendTo($("#daily"));
+                                });
+                            </code>
+                        </pre>
+<div id='daily'></div>
                     </div>
-                    <button class='show-btn4'>Compare Here!</button>
+                    <button class='show-btn4 mb-4'>Compare Your Display Code</button>
                     
                     </div>
                 </div>
@@ -155,6 +214,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <!-- <script src="./assets/js/script.js"></script> -->
+    <script src="./assets/js/index.js"></script>
     <script src="./assets/js/index_demo.js"></script>
 </html>
