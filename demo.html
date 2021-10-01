@@ -91,7 +91,7 @@
                         </code>
                     </pre>
                     </div>
-                    <button class='show-btn1'>Compare Your Variable Allocation</button>
+                    <button class='show-btn1 mb-4'>Compare Your Variable Allocation</button>
 
                     <p class="clas-text">Now that you have your variables, the next steps will be to fetch the data and display it to your console. (We will fetch temperature and wind speed data from OpenWeather and display it in the console when you click the button below as an example.)
                         <ul>
@@ -124,9 +124,9 @@
                             </code>
                         </pre>
                     </div>
-                    <button class='show-btn2'>Compare Your Fetch Code</button>
+                    <button class='show-btn2 mb-4'>Compare Your Fetch Code</button>
 
-                    <p class="class-text">Now that you have the data you will need to make a for loop with the data array.                         
+                    <p class="class-text">Now that you have verified the data, you will want to make a for loop with the data array to access more of the specific data you want. (We wanted to obtain the temperature and wind speed for the 5 days, so we loop obtain 5 days of data from the array.).                         
                         <ul>
                             <li>
                                 This for loop section will be nested inside your second .then function 
@@ -146,7 +146,7 @@
                                     return response.json();
                                 })
                                 .then(function (data) {
-                                for (var i = 1; i < 5; i++) {
+                                for (var i = 0; i &lt 5; i++) {
                                     console.log("Atlanta: " + i + " day(s) from now Max Temp: " + Math.round(data.daily[i].temp.max));
                                     console.log("Atlanta: " + i + " day(s) from now Wind Speed: " + Math.round(data.daily[i].wind_speed));
                                 }
@@ -154,15 +154,14 @@
                             </code>
                         </pre>
                     </div>
-                    <button class='show-btn3'>Compare Your Loop Function</button>
+                    <button class='show-btn3 mb-4'>Compare Your Loop Function</button>
 
-                    <p class="class-text">After you done that you can use the data with the increment and the data type
-                        you want to use</p>
+                    <p class="class-text">Now, that you have the group of data you want to use/display for your project, you can go ahead and manipulate it to feet your needs. (Using the weather API, below we created a 5 Day forecast placed in cards with imagery.)</p>
 
-                    <p class="class-text">Now you can append the new variables to your html page                        
+                    <p class="class-text">Now you can append your chosen data to your project in html to create your desired outcome.                        
                         <ul>
                             <li> 
-                             These variables should still be nested inside your 'for loop' before curly brackets closing. 
+                             Note: These changes should still be nested inside your 'for loop' before curly brackets closing. 
                             </li>
                         </ul>
                     </p>
@@ -179,7 +178,7 @@
                                     return response.json();
                                 })
                                 .then(function (data) {
-                                for (var i = 1; i &lt 5; i++) {
+                                for (var i = 0; i &lt 5; i++) {
                                 $("&ltdiv&gt", { class: "col w-20 d-inline-flex" })
                                 .append(
                                     $(
@@ -202,7 +201,7 @@
                         </pre>
 <div id='daily'></div>
                     </div>
-                    <button class='show-btn4'>Compare Your Display Code</button>
+                    <button class='show-btn4 mb-4'>Compare Your Display Code</button>
                     
                     </div>
                 </div>

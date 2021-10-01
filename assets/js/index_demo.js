@@ -59,7 +59,7 @@ $('.show-btn3').click(function() {
                 return response.json();
             })
             .then(function (data) {
-                for (var i = 1; i < 5; i++) {
+                for (var i = 0; i < 5; i++) {
                 console.log("Atlanta: " + i + " day(s) from now Max Temp: " + Math.round(data.daily[i].temp.max));
                 console.log("Atlanta: " + i + " day(s) from now Wind Speed: " + Math.round(data.daily[i].wind_speed));
             }
