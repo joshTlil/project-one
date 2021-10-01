@@ -10,8 +10,8 @@ var indicator= $("#indicator")
 //Quiz object
 var quiz = {
     questions: ['Where do you obtain your APIKey','Where in the URL do you start implementing your changes','Why do you need to return as a .json','what is .then'],
-
-    answers: ['Off the website that you are obtaining data on', 'from my github','To manipulate the data into an array','after.com','from your instructor','It means next','random','after the ?','To manipulate the data into an array','It is a promise','it is a object','To display changes to the html page'],
+    answers: ['Off the website that you are obtaining data on', 'from my github','from your instructor', 'from Google','after.com','the very end','It means next','after https://','to make it pretty','To manipulate the data into an array','To display changes to the html page','to style it correctly',
+    'It is a promise','it is a object','it is a function','it is a variable'],
     correctAns:['Off the website that you are obtaining data on','after the ?','To manipulate the data into an array','It is a promise'],
 }
 console.log(quiz)
@@ -40,12 +40,14 @@ var quizRunner= function () {
         $(quesHolder).text(quiz.questions[i]);
 
         //change answers
-        $(answers[x]).text(quiz.answers[x]);
-        $(answers[++x]).text(quiz.answers[x]);
-        $(answers[++x]).text(quiz.answers[x]);
-        $(answers[++x]).text(quiz.answers[x]);
+        $(answers[0]).text(quiz.answers[x]);
+        console.log(quiz.answers[x])
+        $(answers[1]).text(quiz.answers[++x]);
+        $(answers[2]).text(quiz.answers[++x]);
+        $(answers[3]).text(quiz.answers[++x]);
         i++;
         x++;
+        console.log(x)
     }
     else {
         quizOver()
@@ -61,8 +63,7 @@ var quizOver = function () {
     //remove ans button
     $(ansButtons).css("display","none");
     
-    //reset indicator buttons
-    $(indicator).css("display", "none")
+    
 
     //show start button
     $(startButton).css("display","initial");
@@ -70,6 +71,9 @@ var quizOver = function () {
     //reset variables
     x = 0;
     i = 0;
+
+    //reset indicator buttons
+    $(indicator).css("display", "none")
 }
 
 //answer button event listner
@@ -83,6 +87,7 @@ ansButtons.on("click",function(event) {
     if (quiz.correctAns[(i-1)] ==ans) {
         $(indicator).css("display", "initial")
         $(indicator).text("Correct")
+        
     }
     else {
         $(indicator).css("display", "initial")
