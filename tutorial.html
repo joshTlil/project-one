@@ -66,48 +66,88 @@
 
             <div class="card three">
                 <div class="card-body">
-                    <h5 class="card-title">API Tutorial </h5>
-                    <img src="./assets/images/generic-image-placeholder.png" alt="placeholder" />
+                    <h5 class="card-title"></h5>
+                    <img src="assets/images/title.smaller.png">
                     <p class="card-text">On this page we will go through the steps of getting and using data from an
                         API. It explains and shows the coding process.</p>
                     <!--Needs screenshot-->
-                    <p class="card-text">First you need to get the random generated API Key from the website to gain
-                        authorize to the sites data </p>
+                   
+                    <p class="card-text">First if the website that your using needs a API key, you need to get that first because API keys are used for 
+                        authentication purposes. </p>
+                       
                     <!--Screenshot-->
                     <!--Quiz question here-->
-                    <p class="card-text">Next you need to go the sites documentation page and see how to utilize the URL
-                        and the API Key </p>
+                    <p class="card-text">Next you need to go the sites documentation page and see how to utilize the URL,
+                        and if they have API Key see how they the in their URL. </p>
+                        <img src="assets/images/brewery documentation.PNG">
 
-                    <p class="card-text">Open up your javascript and create a variable that will hold your API Key</p>
+
+                    <p class="card-text">Open up your javascript and create a variable that will hold your API Key (if needed).</p>
+                    <code>
+                        var APIKEY = {APIKEY}
+                    </code>
                     <!--Quiz question-->
-                    <p class="card-text">Next you will need to make another variable, this variable will hold your URL
-                        with the API key and information your that you want to fetch </p>
+                    <p class="card-text">Next you will need to make two more variables, one variable to contain and hold your and display your data on your html page, 
+                        and the other variable to hold your URL link so that you can fetch it in the next step.</p>
+                        <code>
+                            var fetchURL = 'https://api.openbrewerydb.org/breweries?by_city=san_diego'
+                            var BreweryContainer = document.getElementById
+                        </code>
                     <!--Screenshot here-->
                     <p class="clas-text">Now that you have that you need to make a fetch function with the variable URL
-                        in the parameter</p>
+                        in the parameter.</p>
+                        <code>
+                            fetch(requestUrl)
+                        </code>
                     <!--Screenshot here-->
                     <p class="class-text">Next you will create a promise which will be called (.then) and in that
                         promise you will make another function with response in that parameter, next to the parameter
-                        you're going to create {}</p>
+                        you're going to create {}.</p>
+                        <code>
+                            .then(function (response) {
+                        </code>
                     <!--Screenshot here-->
                     <p class="class-text">Inside the {} your are going to make the response return as a .json so it can
-                        easily manipulate the data as an array</p>
+                        easily manipulate the data as an array.</p>
+                        <code>
+                            return response.json();
+                        </code>
                     <!--3 screenshots here-->
                     <p class="class-text">Now you need to make another promise .then next to the new function with data
                         in the parameter,
                         if you want to see if the data went through you can console.log the data and you can look in the
-                        console on you html page
+                        console on you html page.
                     </p>
+                    <code>
+                        then(function (data){
+                            console.log(data);
+                    </code>
                     <!--Screenshot of the for loop -->
-                    <p class="class-text">Now that you have the data you will need to make a for loop with the data </p>
+                    <p class="class-text">Now that you have the data you will need to make a for loop with the data. </p>
+                    <code>
+                        for (var i = 0; i < data.length; i++)
+                    </code>
                     <!--Screenshot-->
                     <p class="class-text">Now that you have the data you will want to push the data to the page you want
-                        to create two new variables and and element that equal to each other</p>
+                        to create two new variables and and element that equal to each other.</p>
+                        <code>
+                        var city = document.createElement('h3');
+                        var names = document.createElement('p');
+                        </code>
                     <!--screenshot-->
-                    <p class="class-text">After you done that you can use the data with the incrament and the data type
-                        you want to use</p>
+                    <p class="class-text">After you done that you can use the data with the increment and the data type
+                        you want to use.</p>
+                        <code>
+                            city.textContent = data[i].city;
+                            names.textContent = data[i].name;
+                        </code>
                     <!--screenshot-->
-                    <p class="class-text">Now you can append the new variables to your html page</p>
+                    <p class="class-text">Now you can append the new variables to your html page.</p>
+                    <code>
+                        BreweriesContainer.append(city);
+                        BreweriesContainer.append(name);
+                    
+                    </code>
                 </div>
 
                 <div class="card quiz" style="width: 18rem;">

@@ -9,10 +9,12 @@ var indicator= $("#indicator")
 
 //Quiz object
 var quiz = {
-    questions: ["first","second","third"],
-    answers: ["one","two","three","four","one","two","three","four","one","two","three","four"],
-    correctAns:["one","two","four"],
+    questions: ['Where do you obtain your APIKey','Where in the URL do you start implementing your changes','Why do you need to return as a .json','what is .then'],
+
+    answers: ['Off the website that you are obtaining data on', 'from my github','To manipulate the data into an array','after.com','from your instructor','It means next','random','after the ?','To manipulate the data into an array','It is a promise','it is a object','To display changes to the html page'],
+    correctAns:['Off the website that you are obtaining data on','after the ?','To manipulate the data into an array','It is a promise'],
 }
+console.log(quiz)
 
 //start button event listener
 startButton.on("click", function() {
@@ -91,3 +93,4 @@ ansButtons.on("click",function(event) {
     quizRunner();
 
 });
+   
