@@ -76,6 +76,35 @@ $('.show-btn4').click(function() {
     if (clicked4) {
         $('.hide4').show();
         clicked4 = false;
+        var lat = 33.749;
+        var lon = -84.388;
+        var city = 'Atlanta';
+        var apiKey = urlSuffix;
+        var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&exclude=hourly&units=imperial';
+        fetch(apiUrl)
+            .then(function (response) {             
+                return response.json();
+            })
+            .then(function (data) {
+                for (var i = 0; i < 5; i++) {
+        $("<div>", { class: "m-3 w-20 d-inline-flex" })
+          .append(
+            $(
+              "<div class='card w-20'><img class='card-img-top mw-20' src='https://openweathermap.org/img/wn/" +
+                data.daily[i].weather[0].icon +
+                "@4x.png' alt='weather icon'><div class='card-body'><h5 class='card-title'>" +
+                "</h5><p class='card-text'>Temp: " +
+                Math.round(data.daily[i].temp.max) +
+                "°F</p><p class='card-text'>Wind: " +
+                Math.round(data.daily[i].wind_speed) +
+                " MPH</p><p class='card-text'>Humidity: " +
+                data.daily[i].humidity +
+                "%</p></div></div></div>"
+            )
+          )
+          .appendTo($("#daily"));
+            }
+             });
     } else if (!clicked4) {
         $('.hide4').hide();
         console.clear();

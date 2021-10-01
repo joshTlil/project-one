@@ -179,15 +179,28 @@
                                     return response.json();
                                 })
                                 .then(function (data) {
-                                for (var i = 1; i < 5; i++) {
-
-                                }
+                                for (var i = 1; i &lt 5; i++) {
+                                $("&ltdiv&gt", { class: "col w-20 d-inline-flex" })
+                                .append(
+                                    $(
+                                    "&ltdiv class='card w-20'&gt&ltimg class='card-img-top mw-20' src='https://openweathermap.org/img/wn/" +
+                                        data.daily[i].weather[0].icon +
+                                        "@4x.png' alt='weather icon'&gt&ltdiv class='card-body'&gt&lth5 class='card-title'&gt" +
+                                        moment.unix(data.daily[i].dt).format("M/DD/YYYY") +
+                                        "&lt/h5&gt&ltp class='card-text'&gtTemp: " +
+                                        Math.round(data.daily[i].temp.max) +
+                                        "°F&lt/p&gt&ltp class='card-text'&gtWind: " +
+                                        Math.round(data.daily[i].wind_speed) +
+                                        " MPH&lt/p&gtltp class='card-text'>Humidity: " +
+                                        data.daily[i].humidity +
+                                        "&lt/p&gt&lt/div&gt&lt/div&gt&lt/div&gt"
+                                    )
+                                )
+                                .appendTo($("#daily"));
                                 });
-                                tableData.appendChild(link);
-                                createTableRow.appendChild(tableData);
-                                tableBody.appendChild(createTableRow);
                             </code>
                         </pre>
+<div id='daily'></div>
                     </div>
                     <button class='show-btn4'>Compare Your Display Code</button>
                     
