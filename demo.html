@@ -61,148 +61,179 @@
                 <div class="card four">
                     <div class="card-body">
                     <h5 class="card-title">API Demo</h5>
-                    <p class="card-text">On this page we will go through a tutorial for you to get involved and learn hands-on. All you have to do is be on Google Chrome browser and follow our directions.</p>
-                
-                    <p class="card-text">If you've followed along from the <a href="./tutorial.html" alt="Link to Tutorial">Tutorial</a> you should be in position to begin practicing some code along with us.
+                    <p class="card-text">On this page we will go through a tutorial for you to get involved and learn hands-on. To get the most out of the demo, use Google Chrome and open the console. To open the console, right-click on the page, select Inspect, and select the Console tab.</p>
+
+                    <p class="card-text">If you've read the page on <a href='./documentation.html' alt='link to documentation page'>documentation</a> and followed along with the <a href="./tutorial.html" alt="Link to Tutorial">tutorial</a>, you are ready to begin practicing some code. Open your favorite text editor or IDE and write some JavaScript with us as we demonstrate using an API.</p>
+                    <p>Before we get started, make sure you've completed the steps below.
                         <ul>
-                            <li> 
-                                Received random generated API Key from the website 
+                            <li>
+                                Create an account at <a href='https://openweathermap.org/' alt='link to Open Weather Map'>OpenWeather</a> to receive an API key (it can take a couple of hours for the key to work after they send you the email)
                             </li>
                             <li>
-                                Accessed sites documentation page to learn how to use the URL and API key
+                                Read through their <a href='https://openweathermap.org/api' alt='link to OpenWeather API'>documentation page</a> to find out the specifics of their API
                             </li>
                             <li>
-                                Go to your working JavaScript file and be ready to start coding!
+                                Open to your JavaScript file and get ready to start coding!
                             </li>
                         </ul>
                     </p>
-                    
-                    <p class="card-text">Open up your JavaScript and create some variables for your API URL and the API key. We will write these variables to the console log to make sure they are assigned correctly.</p>
 
-                    <div class="hide1">
-                    <pre>
-                        <code>
-                            var lat = 33.749;
-                            var lon = -84.388;
-                            var apiKey = 'xxxRandomNumbersAndLettersxxx';
-                            var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&exclude=hourly&units=imperial';
-                            console.log("API URL: " + apiUrl);
-                            console.log("API key: " + apiKey);
-                        </code>
-                    </pre>
-                    </div>
-                    <button class='show-btn1 mb-4'>Compare Your Variable Allocation</button>
+                    <p class="card-text">First, we will create some variables for the API URL, API key, latitude, and longitude. We will write these variables to the console log to make sure they are assigned correctly. Once you've written your code, click the button below to compare it to ours.</p>
 
-                    <p class="clas-text">Now that you have your variables, the next steps will be to fetch the data and display it to your console. (We will fetch temperature and wind speed data from OpenWeather and display it in the console when you click the button below as an example.)
-                        <ul>
-                            <li> Create a promise which will be called (.then) and in that promise you will make another function with response in that parameter, next to the parameter you're going to create {}.
-                            </li>
-                            <li>
-                                Inside the {} your are going to make the response return as a .json so you can easily manipulate the data as an array.
-                            </li>
-                            <li>
-                                Now you need to make another promise (.then) next to the new function with data
-                                in the parameter, if you want to see whether the data went through you can console.log the returned data and look at it in the console on the page. Open your console log now, and click the button below to see an example.
-                            </li>
-                        </ul>
-                    </p>
-                    
-                    <div class="hide2">
+                    <div class="hide1 bg-dark rounded">
                         <pre>
-                            <code>
-                            var city = 'atlanta';
-                            var apiKey = urlSuffix;
-                            var apiUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=1&appid=' + apiKey;
-                            fetch(apiUrl)
-                                .then(function (response) {
-                                    return response.json();
-                                })
-                                .then(function (data) {
-                                console.log("Temp: " + Math.round(data.current.temp));
-                                console.log("Wind: " + Math.round(data.current.wind_speed));
-                            });
-                            </code>
-                        </pre>
-                    </div>
-                    <button class='show-btn2 mb-4'>Compare Your Fetch Code</button>
+                            <code class='text-success text-monospace'>
+    &#47;&#47;declare variables to use in the API call
+        var lat = 33.749;
+        var lon = -84.388;
+        var apiKey = 'insert_your_api_key_here';
+        var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&exclude=hourly&units=imperial';
 
-                    <p class="class-text">Now that you have verified the data, you will want to make a for loop with the data array to access more of the specific data you want. (We wanted to obtain the temperature and wind speed for the 5 days, so we loop obtain 5 days of data from the array.).                         
+    &#47;&#47;log the variables to the console to make sure they work
+        console.log("Latitude: " + lat);
+        console.log("Longitude: " + lon);
+        console.log("API URL: " + apiUrl);
+        console.log("API key: " + apiKey);
+                        </code></pre>
+                    </div>
+                    <button class='show-btn1 my-3 btn btn-info'>Compare Your Variables</button>
+
+                    <p class="clas-text">Now that we have our variables assigned correctly, we will fetch the data and display it in the console.
                         <ul>
                             <li>
-                                This for loop section will be nested inside your second .then function 
+                                To use the fetch() method, we insert the API URL into the parentheses and append .then with a function inside to handle the response.
+                            </li>
+                            <li>
+                                Inside the {} we will convert the response into a JSON object and return it so we can manipulate the data.
+                            </li>
+                            <li>
+                                Now we will append another .then with a function containing a (data) parameter.
+                            </li>
+                            <li>
+                                Inside that function, we will console log the variables for Temperature and Wind Speed to make sure we are receiving a response.
                             </li>
                         </ul>
                     </p>
-
-                    <div class="hide3">
+                    <p>Once you've created your code, open the console log and click the button below below to compare it to ours.</p>
+                    <div class="hide2 bg-dark rounded">
                         <pre>
-                            <code>
-                            var lat = 33.749;
-                            var lon = -84.388;
-                            var apiKey = urlSuffix;
-                            var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&exclude=hourly&units=imperial';
-                            fetch(apiUrl)
-                                .then(function (response) {             
-                                    return response.json();
-                                })
-                                .then(function (data) {
-                                for (var i = 0; i &lt 5; i++) {
-                                    console.log("Atlanta: " + i + " day(s) from now Max Temp: " + Math.round(data.daily[i].temp.max));
-                                    console.log("Atlanta: " + i + " day(s) from now Wind Speed: " + Math.round(data.daily[i].wind_speed));
-                                }
-                                });
-                            </code>
-                        </pre>
+                            <code class='text-success text-monospace'>
+    &#47;&#47;declare variables to use in the API call
+        var lat = 33.749;
+        var lon = -84.388;
+        var apiKey = 'insert_your_api_key_here';
+        var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&exclude=hourly&units=imperial';
+
+    &#47;&#47;fetch the data from the API
+        fetch(apiUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+
+    &#47;&#47;log the Temperature and Wind Speed to the console
+            console.log("Temp: " + Math.round(data.current.temp));
+            console.log("Wind: " + Math.round(data.current.wind_speed));
+        });
+                            </code></pre>
                     </div>
-                    <button class='show-btn3 mb-4'>Compare Your Loop Function</button>
+                    <button class='show-btn2 my-3 btn btn-info'>Compare Your Fetch Code</button>
 
-                    <p class="class-text">Now, that you have the group of data you want to use/display for your project, you can go ahead and manipulate it to feet your needs. (Using the weather API, below we created a 5 Day forecast placed in cards with imagery.)</p>
-
-                    <p class="class-text">Now you can append your chosen data to your project in html to create your desired outcome.                        
+                    <p class="class-text">Now that we've verified the data, we will make a for loop with the daily data array and display the Max Temp and Wind Speed in the console.
                         <ul>
-                            <li> 
-                             Note: These changes should still be nested inside your 'for loop' before curly brackets closing. 
+                            <li>
+                                The for loop will be nested inside the second .then function and use an increment variable to select the array position.
+                            </li>
+                            <li>
+                                Let's round the return value to the nearest whole number for readability.
                             </li>
                         </ul>
                     </p>
-                    
-                    <div class="hide4">
+                    <p>
+                        Once you've created your code, open the console log and click the button below below to compare it to ours.
+                    </p>
+                    <div class="hide3 bg-dark rounded">
                         <pre>
-                            <code>
-                            var lat = 33.749;
-                            var lon = -84.388;
-                            var apiKey = urlSuffix;
-                            var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&exclude=hourly&units=imperial';
-                            fetch(apiUrl)
-                                .then(function (response) {             
-                                    return response.json();
-                                })
-                                .then(function (data) {
-                                for (var i = 0; i &lt 5; i++) {
-                                $("&ltdiv&gt", { class: "col w-20 d-inline-flex" })
-                                .append(
-                                    $(
-                                    "&ltdiv class='card w-20'&gt&ltimg class='card-img-top mw-20' src='https://openweathermap.org/img/wn/" +
-                                        data.daily[i].weather[0].icon +
-                                        "@4x.png' alt='weather icon'&gt&ltdiv class='card-body'&gt&lth5 class='card-title'&gt" +
-                                        moment.unix(data.daily[i].dt).format("M/DD/YYYY") +
-                                        "&lt/h5&gt&ltp class='card-text'&gtTemp: " +
-                                        Math.round(data.daily[i].temp.max) +
-                                        "°F&lt/p&gt&ltp class='card-text'&gtWind: " +
-                                        Math.round(data.daily[i].wind_speed) +
-                                        " MPH&lt/p&gtltp class='card-text'>Humidity: " +
-                                        data.daily[i].humidity +
-                                        "&lt/p&gt&lt/div&gt&lt/div&gt&lt/div&gt"
-                                    )
-                                )
-                                .appendTo($("#daily"));
-                                });
-                            </code>
-                        </pre>
+                            <code class='text-success text-monospace'>
+    &#47;&#47;declare variables to use in the API call
+        var lat = 33.749;
+        var lon = -84.388;
+        var apiKey = 'insert_your_api_key_here';
+        var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&exclude=hourly&units=imperial';
+
+    &#47;&#47;fetch the data from the API
+        fetch(apiUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+
+    &#47;&#47;loop through the array, round the values, and log the results to the console
+            for (var i = 0; i &lt 5; i++) {
+                console.log("Atlanta: " + i + " day(s) from now Max Temp: " + Math.round(data.daily[i].temp.max));
+                console.log("Atlanta: " + i + " day(s) from now Wind Speed: " + Math.round(data.daily[i].wind_speed));
+            }
+            });</code>
+    </pre>
+                    </div>
+                    <button class='show-btn3 my-3 btn btn-info'>Compare Your Loop Function</button>
+
+                    <p class="class-text">So far, we've declared and verified variables, retrieved data using the fetch method,  and produced a for loop to get information from an array in the response. Now it's time to take that data and display it on our page. We will create cards for the 5 day forecast and input data from the API call into them.</p>
+
+                    <p class="class-text">
+                        <ul>
+                            <li>
+                                We're going to use the jQuery and Bootstrap libraries to make creating and displaying the cards easier.
+                            </li>
+                            <li>
+                             Note: These changes should still be nested inside your 'for loop' before the closing curly bracket.
+                            </li>
+                        </ul>
+                    </p>
+                    <p>
+                        Once you've created your code, open the console log and click the button below below to compare it to ours.
+                    </p>
+                    <div class="hide4 bg-dark rounded">
+                        <pre>
+                            <code class='text-success text-monospace'>
+    &#47;&#47;declare variables to use in the API call
+        var lat = 33.749;
+        var lon = -84.388;
+        var apiKey = 'insert_your_api_key_here';
+        var apiUrl = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&appid=' + apiKey + '&exclude=hourly&units=imperial';
+
+    &#47;&#47;fetch the data from the API
+        fetch(apiUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+
+    &#47;&#47;loop through the daily date array (it contains 7 days, but we're only using 5), create the elements, and insert variables from the response
+        for (var i = 0; i &lt 5; i++) {
+        $("&ltdiv&gt", { class: "col w-20 d-inline-flex" })
+        .append(
+            $(
+            "&ltdiv class='card w-20'&gt&ltimg class='card-img-top mw-20' src='https://openweathermap.org/img/wn/" +
+                data.daily[i].weather[0].icon +
+                "@4x.png' alt='weather icon'&gt&ltdiv class='card-body'&gt&lth5 class='card-title'&gt" +
+                moment.unix(data.daily[i].dt).format("M/DD/YYYY") +
+                "&lt/h5&gt&ltp class='card-text'&gtTemp: " +
+                Math.round(data.daily[i].temp.max) +
+                "°F&lt/p&gt&ltp class='card-text'&gtWind: " +
+                Math.round(data.daily[i].wind_speed) +
+                " MPH&lt/p&gtltp class='card-text'>Humidity: " +
+                data.daily[i].humidity +
+                "&lt/p&gt&lt/div&gt&lt/div&gt&lt/div&gt"
+            )
+        )
+        .appendTo($("#daily"));
+        });
+                            </code></pre>
 <div id='daily'></div>
                     </div>
-                    <button class='show-btn4 mb-4'>Compare Your Display Code</button>
-                    
+                    <button class='show-btn4 my-3 btn btn-info'>Compare Your Code and Cards</button>
+
                     </div>
                 </div>
 
