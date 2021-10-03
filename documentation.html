@@ -29,63 +29,8 @@
         </nav>
       </div>
     </header>
-    <main class="d-flex flex-row">
-      <section class="side col">
-        <aside>
-          <h5>
-            <button
-              type="button"
-              class="side_button btn btn-primary"
-              data-toggle="modal"
-              data-target="#exampleModal"
-            >
-              Saved Section
-            </button>
-          </h5>
-          <div
-            class="modal fade"
-            id="exampleModal"
-            tabindex="-1"
-            role="dialog"
-            aria-labelledby="exampleModalLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">
-                    How to use this feature!
-                  </h5>
-                  <button
-                    type="button"
-                    class="close"
-                    data-dismiss="modal"
-                    aria-label="Close"
-                  >
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <p>
-                    Click on any header and a button will save here for you to
-                    click and jump back to that same section.
-                  </p>
-                </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </aside>
-      </section>
-      <section class="cards col-11">
+    <main class="container">
+      <section class="cards">
         <div class="card two">
           <div class="card-body">
             <h5 class="card-title">Documentation</h5>
@@ -95,7 +40,7 @@
               familiarize yourself with the documentation. We will look through
               two examples of documentation and explain the important parts to
               get started using it. APIs and their documentation aren’t
-              standardized, so you may have to search around to figure out how
+              standardized, so you may have to search around to div out how
               to use it. In general, documentation should tell you:
                <ul>
                  <li>
@@ -135,7 +80,7 @@
               starts with https, that tells us we’ll need to run our JavaScript
               query on a secure site to avoid issues with Mixed Content. After
               that it contains the typical subdomain “api”, the domain name is
-              next, and following it is /breweries. So far, we’ve figured out
+              next, and following it is /breweries. So far, we’ve divd out
               which technology to use (JavaScript) and the URL we’ll need for
               our fetch method.
             </p>
@@ -169,7 +114,7 @@
             </p>
             <p class="class-text">
               That’s all the information from the documentation section. We were
-              able to figure out which technology to use (JSON), how to interact
+              able to div out which technology to use (JSON), how to interact
               (URLs, search parameters), what information is available (the keys
               and values of the objects), but other than the Autocomplete
               section, we didn’t find any usage limits or guidelines. Let’s
@@ -203,5 +148,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/index.js"></script>
 </html>
