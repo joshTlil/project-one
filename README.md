@@ -1,5 +1,5 @@
 # Server Side Station (S3)
-Welcome to Server Side Station or S3, a site that provides additional insight on how APIs work.  We focus on documentation, acquiring authentication keys and miscellaneous data using the FETCH method, and how to manipulate the data received to be used by the user as they see fit.  We provide a tutorial and demo for better understanding.
+Welcome to Server Side Station or S3, a site that provides additional insight on how server sideAPIs work.  We focus on documentation, acquiring authentication keys and miscellaneous data using the FETCH method, and how to manipulate the data received to be used by the user as they see fit.  We provide a tutorial and demo for better understanding.
 
 ## User Story
 ```
@@ -21,7 +21,7 @@ Then I am provided information related specifically to that topic
 
 Given you are able to successfully navigate the site, you will gain knowledge in the following areas:
 
-* Understand what an APIs are and what their potential when coding
+* Understand what server side APIs are and what their potential when coding
 
 * Understand API documentation and how to navigate it to locate any authentication requirements
 
@@ -35,7 +35,7 @@ Given you are able to successfully navigate the site, you will gain knowledge in
 
 1. Github Repository:   https://github.com/joshTlil/project-one.git
 
-2. Deployed Live Site:  
+2. Deployed Live Site:  https://joshtlil.github.io/project-one/
 
 
 
