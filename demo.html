@@ -1,55 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Server Side APIs</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:ital,wght@1,700&family=Montserrat:wght@600&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="./assets/css/index.css" />
-      </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Server Side APIs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:ital,wght@1,700&family=Montserrat:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
 
-    <body>
-        <header>
-            <h1>Server Side Station </h1>
-            <div class="container d-flex justify-content-center">
-                <nav class="navbar navbar-expand-lg ">
-                  <a class="navbar-brand" href="./index.html">Home</a>
-                  <a class="navbar-brand" href="./documentation.html">Documentation</a>
-                  <a class="navbar-brand" href="./tutorial.html">Tutorial</a>
-                  <a class="navbar-brand" href="./demo.html">Demo</a>
-                </nav>
-              </div>
-        </header>
+<body>
+    <header>
+        <h1>Server Side Station </h1>
+        <div class="container d-flex justify-content-center">
+            <nav class="navbar navbar-expand-lg ">
+                <a class="navbar-brand" href="./index.html">Home</a>
+                <a class="navbar-brand" href="./documentation.html">Documentation</a>
+                <a class="navbar-brand" href="./tutorial.html">Tutorial</a>
+                <a class="navbar-brand" href="./demo.html">Demo</a>
+            </nav>
+        </div>
+    </header>
 
 
-        <main class="container">
-            <section class="cards">
-                <div class="card four">
-                    <div class="card-body">
+    <main class="container">
+        <section class="cards">
+            <div class="card four">
+                <div class="card-body">
                     <h5 class="card-title">API Demo</h5>
-                    <p class="card-text">On this page we will go through a tutorial for you to get involved and learn hands-on. To get the most out of the demo, use Google Chrome and open the console. To open the console, right-click on the page, select Inspect, and select the Console tab.</p>
+                    <p class="card-text">On this page we will go through a tutorial for you to get involved and learn
+                        hands-on. To get the most out of the demo, use Google Chrome and open the console. To open the
+                        console, right-click on the page, select Inspect, and select the Console tab.</p>
 
-                    <p class="card-text">If you've read the page on <a href='./documentation.html' alt='link to documentation page'>documentation</a> and followed along with the <a href="./tutorial.html" alt="Link to Tutorial">tutorial</a>, you are ready to begin practicing some code. Open your favorite text editor or IDE and write some JavaScript with us as we demonstrate using an API.</p>
+                    <p class="card-text">If you've read the page on <a href='./documentation.html'
+                            alt='link to documentation page'>documentation</a> and followed along with the <a
+                            href="./tutorial.html" alt="Link to Tutorial">tutorial</a>, you are ready to begin
+                        practicing some code. Open your favorite text editor or IDE and write some JavaScript with us as
+                        we demonstrate using an API.</p>
                     <p>Before we get started, make sure you've completed the steps below.
-                        <ul>
-                            <li>
-                                Create an account at <a href='https://openweathermap.org/' alt='link to Open Weather Map'>OpenWeather</a> to receive an API key (it can take a couple of hours for the key to work after they send you the email)
-                            </li>
-                            <li>
-                                Read through their <a href='https://openweathermap.org/api' alt='link to OpenWeather API'>documentation page</a> to find out the specifics of their API
-                            </li>
-                            <li>
-                                Open to your JavaScript file and get ready to start coding!
-                            </li>
-                        </ul>
+                    <ul>
+                        <li>
+                            Create an account at <a href='https://openweathermap.org/'
+                                alt='link to Open Weather Map'>OpenWeather</a> to receive an API key (it can take a
+                            couple of hours for the key to work after they send you the email)
+                        </li>
+                        <li>
+                            Read through their <a href='https://openweathermap.org/api'
+                                alt='link to OpenWeather API'>documentation page</a> to find out the specifics of their
+                            API
+                        </li>
+                        <li>
+                            Open your JavaScript file or Click to open a textbox area and Get ready to start coding!
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                        Click the Show/Hide Textbox button to display or remove a moveable text box. Click the Save
+                        Typed Code button to
+                        save your code for later reference.
+                    </p>
+                    <p>
+                        <button id="textOpen" class=" my-3 btn btn-info">Show/Hide Textbox</button>
+                        <button class="my-3 btn btn-info" id="saveBtn">Save Typed Code</button>
+
                     </p>
 
-                    <p class="card-text">First, we will create some variables for the API URL, API key, latitude, and longitude. We will write these variables to the console log to make sure they are assigned correctly. Once you've written your code, click the button below to compare it to ours.</p>
+
+                    <div><textarea class='textCode bg-dark text-success text-monospace rounded'
+                            style="display: none; height: 13rem; width: 100%;"></textarea></div>
+                    <p class="card-text">First, we will create some variables for the API URL, API key, latitude, and
+                        longitude. We will write these variables to the console log to make sure they are assigned
+                        correctly. Once you've written your code, click the button below to compare it to ours.</p>
 
                     <div class="hide1 bg-dark rounded">
                         <pre>
@@ -69,23 +96,28 @@
                     </div>
                     <button class='show-btn1 my-3 btn btn-info'>Compare Your Variables</button>
 
-                    <p class="clas-text">Now that we have our variables assigned correctly, we will fetch the data and display it in the console.
-                        <ul>
-                            <li>
-                                To use the fetch() method, we insert the API URL into the parentheses and append .then with a function inside to handle the response.
-                            </li>
-                            <li>
-                                Inside the {} we will convert the response into a JSON object and return it so we can manipulate the data.
-                            </li>
-                            <li>
-                                Now we will append another .then with a function containing a (data) parameter.
-                            </li>
-                            <li>
-                                Inside that function, we will console log the variables for Temperature and Wind Speed to make sure we are receiving a response.
-                            </li>
-                        </ul>
+                    <p class="clas-text">Now that we have our variables assigned correctly, we will fetch the data and
+                        display it in the console.
+                    <ul>
+                        <li>
+                            To use the fetch() method, we insert the API URL into the parentheses and append .then with
+                            a function inside to handle the response.
+                        </li>
+                        <li>
+                            Inside the {} we will convert the response into a JSON object and return it so we can
+                            manipulate the data.
+                        </li>
+                        <li>
+                            Now we will append another .then with a function containing a (data) parameter.
+                        </li>
+                        <li>
+                            Inside that function, we will console log the variables for Temperature and Wind Speed to
+                            make sure we are receiving a response.
+                        </li>
+                    </ul>
                     </p>
-                    <p>Once you've created your code, open the console log and click the button below below to compare it to ours.</p>
+                    <p>Once you've created your code, open the console log and click the button below below to compare
+                        it to ours.</p>
                     <div class="hide2 bg-dark rounded">
                         <pre>
                             <code class='text-success text-monospace'>
@@ -110,18 +142,21 @@
                     </div>
                     <button class='show-btn2 my-3 btn btn-info'>Compare Your Fetch Code</button>
 
-                    <p class="class-text">Now that we've verified the data, we will make a for loop with the daily data array and display the Max Temp and Wind Speed in the console.
-                        <ul>
-                            <li>
-                                The for loop will be nested inside the second .then function and use an increment variable to select the array position.
-                            </li>
-                            <li>
-                                Let's round the return value to the nearest whole number for readability.
-                            </li>
-                        </ul>
+                    <p class="class-text">Now that we've verified the data, we will make a for loop with the daily data
+                        array and display the Max Temp and Wind Speed in the console.
+                    <ul>
+                        <li>
+                            The for loop will be nested inside the second .then function and use an increment variable
+                            to select the array position.
+                        </li>
+                        <li>
+                            Let's round the return value to the nearest whole number for readability.
+                        </li>
+                    </ul>
                     </p>
                     <p>
-                        Once you've created your code, open the console log and click the button below below to compare it to ours.
+                        Once you've created your code, open the console log and click the button below below to compare
+                        it to ours.
                     </p>
                     <div class="hide3 bg-dark rounded">
                         <pre>
@@ -149,20 +184,26 @@
                     </div>
                     <button class='show-btn3 my-3 btn btn-info'>Compare Your Loop Function</button>
 
-                    <p class="class-text">So far, we've declared and verified variables, retrieved data using the fetch method,  and produced a for loop to get information from an array in the response. Now it's time to take that data and display it on our page. We will create cards for the 5 day forecast and input data from the API call into them.</p>
+                    <p class="class-text">So far, we've declared and verified variables, retrieved data using the fetch
+                        method, and produced a for loop to get information from an array in the response. Now it's time
+                        to take that data and display it on our page. We will create cards for the 5 day forecast and
+                        input data from the API call into them.</p>
 
                     <p class="class-text">
-                        <ul>
-                            <li>
-                                We're going to use the jQuery and Bootstrap libraries to make creating and displaying the cards easier.
-                            </li>
-                            <li>
-                             Note: These changes should still be nested inside your 'for loop' before the closing curly bracket.
-                            </li>
-                        </ul>
+                    <ul>
+                        <li>
+                            We're going to use the jQuery and Bootstrap libraries to make creating and displaying the
+                            cards easier.
+                        </li>
+                        <li>
+                            Note: These changes should still be nested inside your 'for loop' before the closing curly
+                            bracket.
+                        </li>
+                    </ul>
                     </p>
                     <p>
-                        Once you've created your code, open the console log and click the button below below to compare it to ours.
+                        Once you've created your code, open the console log and click the button below below to compare
+                        it to ours.
                     </p>
                     <div class="hide4 bg-dark rounded">
                         <pre>
@@ -201,20 +242,22 @@
         .appendTo($("#daily"));
         });
                             </code></pre>
-<div id='daily'></div>
+                        <div id='daily'></div>
                     </div>
                     <button class='show-btn4 my-3 btn btn-info'>Compare Your Code and Cards</button>
-
-                    </div>
                 </div>
+            </div>
 
-             </section>
+        </section>
 
 
-        </main>
-    </body>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="./assets/js/index.js"></script>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="./assets/js/index.js"></script>
+
 </html>

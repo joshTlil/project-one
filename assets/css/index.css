@@ -91,3 +91,6 @@ figure{
 .start-button {
     margin-left: 33%;
 }
+
+#draggable { width: 150px; height: 150px; padding: 0.5em; }
+

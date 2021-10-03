@@ -85,10 +85,7 @@ var quizRunner = function () {
 //function for end of quiz
 var quizOver = function () {
   $(quesHolder).text(
-    "Quiz Over! Press Start Button to go through questions again. Your score was " + score);
-
-    localStorage.setItem(".question", score)
-  
+    "Quiz Over! Press Start Button to go through questions again. Your score is " + score + ".");
 
   //remove ans button
   $(ansButtons).css("display", "none");
@@ -138,11 +135,11 @@ $(".show-btn1").click(function () {
     console.log("Longitude: " + lon);
     console.log(
       "API URL: " +
-        "https://api.openweathermap.org/data/2.5/onecall?lat=" +
-        lat +
-        "&lon=" +
-        lon +
-        "&appid=insert_your_api_key_here&exclude=hourly&units=imperial"
+      "https://api.openweathermap.org/data/2.5/onecall?lat=" +
+      lat +
+      "&lon=" +
+      lon +
+      "&appid=insert_your_api_key_here&exclude=hourly&units=imperial"
     );
     console.log("API key: " + "insert_your_api_key_here");
   } else if (!clicked1) {
@@ -211,15 +208,15 @@ $(".show-btn3").click(function () {
           var j = i + 1;
           console.log(
             "Atlanta: " +
-              j +
-              " day(s) from now Max Temp: " +
-              Math.round(data.daily[i].temp.max)
+            j +
+            " day(s) from now Max Temp: " +
+            Math.round(data.daily[i].temp.max)
           );
           console.log(
             "Atlanta: " +
-              j +
-              " day(s) from now Wind Speed: " +
-              Math.round(data.daily[i].wind_speed)
+            j +
+            " day(s) from now Wind Speed: " +
+            Math.round(data.daily[i].wind_speed)
           );
         }
       });
@@ -258,15 +255,15 @@ $(".show-btn4").click(function () {
             .append(
               $(
                 "<div class='card w-20'><img class='card-img-top mw-25' src='https://openweathermap.org/img/wn/" +
-                  data.daily[i].weather[0].icon +
-                  "@4x.png' alt='weather icon'><div class='card-body'>" +
-                  "<p class='card-text'>Temp: " +
-                  Math.round(data.daily[i].temp.max) +
-                  "°F</p><p class='card-text'>Wind: " +
-                  Math.round(data.daily[i].wind_speed) +
-                  " MPH</p><p class='card-text'>Humidity: " +
-                  data.daily[i].humidity +
-                  "%</p></div></div></div>"
+                data.daily[i].weather[0].icon +
+                "@4x.png' alt='weather icon'><div class='card-body'>" +
+                "<p class='card-text'>Temp: " +
+                Math.round(data.daily[i].temp.max) +
+                "°F</p><p class='card-text'>Wind: " +
+                Math.round(data.daily[i].wind_speed) +
+                " MPH</p><p class='card-text'>Humidity: " +
+                data.daily[i].humidity +
+                "%</p></div></div></div>"
               )
             )
             .appendTo($("#daily"));
@@ -276,6 +273,8 @@ $(".show-btn4").click(function () {
     $(".hide4").hide();
     console.clear();
     clicked4 = true;
+    var clearCardsEl = document.getElementById('daily');
+    clearCardsEl.innerHTML = "";
   }
   return;
 });
@@ -305,10 +304,54 @@ $(".show-btn5").click(function () {
       });
   } else if (!clicked5) {
     $(".hide5").hide();
-      console.clear();
-      var breweryContainer = document.getElementById("breweryContainer");
-      breweryContainer.innerHTML = '';
+    console.clear();
+    var breweryContainer = document.getElementById("breweryContainer");
+    breweryContainer.innerHTML = '';
     clicked5 = true;
   }
   return;
+});
+
+//draggable text box
+var textArea = $("textarea")
+  .draggable({
+    cancel: "text",
+    start: function () {
+      $('#textarea').focus();
+    },
+    stop: function () {
+      $('#textarea').focus();
+    }
+  })
+
+
+$('#saveBtn').on('click', function () {
+  localStorage.setItem("writtenCode", $('.textCode').val());
+});
+
+
+var textboxInit = function () {
+
+  var savedCode = localStorage.getItem("writtenCode");
+  if (savedCode) {
+    $(textArea).text(savedCode);
+  };
+}
+
+textboxInit();
+
+//shows textbox
+var clicked = true;
+
+$('#textOpen').on('click', function () {
+
+  if (clicked) {
+    $(textArea).css("display", 'initial');
+    clicked = !clicked;
+  }
+
+  else {
+    $(textArea).css("display", 'none');
+    clicked = !clicked;
+  }
 });
