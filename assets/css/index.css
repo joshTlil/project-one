@@ -63,6 +63,11 @@ figure{
 .quiz {
     background-color:#2b4d59 ;
     color: white;
+    display: block;
+    height: 25rem;
+    width: 25rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .quiz li {
@@ -79,14 +84,10 @@ figure{
     color: white;
 }
 
-.hide1, .hide2, .hide3, .hide4 {
+.hide1, .hide2, .hide3, .hide4, .hide5 {
     display: none;
 }
 
 .start-button {
     margin-left: 33%;
-}
-
-code {
-    font-size: 30px;
 }

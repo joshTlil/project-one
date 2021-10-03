@@ -27,37 +27,8 @@
         </header>
 
 
-        <main class="d-flex flex-row">
-            <section class="side col">
-                <aside>
-                    <h5>
-                    <button type="button" class=" side_button btn btn-primary" data-toggle="modal" data-target="#exampleModal"> Saved Section</button>
-                    </h5>
-
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">How to use this feature!</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p> Click on any header and a button will save here for you to click and jump back to that same section.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
-                </aside>
-            </section>
-
-            <section class="cards col-11">
-
-
+        <main class="container">
+            <section class="cards">
                 <div class="card four">
                     <div class="card-body">
                     <h5 class="card-title">API Demo</h5>
@@ -209,7 +180,7 @@
             })
             .then(function (data) {
 
-    &#47;&#47;loop through the daily date array (it contains 7 days, but we're only using 5), create the elements, and insert variables from the response
+    &#47;&#47;loop through the daily date array (it contains 7 days, but we're only using 4), create the elements, and insert variables from the response
         for (var i = 0; i &lt 5; i++) {
         $("&ltdiv&gt", { class: "col w-20 d-inline-flex" })
         .append(
@@ -246,5 +217,4 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="./assets/js/index.js"></script>
-    <script src="./assets/js/index_demo.js"></script>
 </html>

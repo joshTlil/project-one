@@ -1,186 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Server Side APIs</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:ital,wght@1,700&family=Montserrat:wght@600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Lato:ital,wght@1,700&family=Montserrat:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+    />
     <link rel="stylesheet" href="./assets/css/index.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>Server Side Station </h1>
-        <div class="container d-flex justify-content-center">
-            <nav class="navbar navbar-expand-lg ">
-                <a class="navbar-brand" href="./index.html">Home</a>
-                <a class="navbar-brand" href="./documentation.html">Documentation</a>
-                <a class="navbar-brand" href="./tutorial.html">Tutorial</a>
-                <a class="navbar-brand" href="./demo.html">Demo</a>
-            </nav>
-        </div>
+      <h1>Server Side Station</h1>
+      <div class="container d-flex justify-content-center">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="./index.html">Home</a>
+          <a class="navbar-brand" href="./documentation.html">Documentation</a>
+          <a class="navbar-brand" href="./tutorial.html">Tutorial</a>
+          <a class="navbar-brand" href="./demo.html">Demo</a>
+        </nav>
+      </div>
     </header>
-
-
-    <main class="d-flex flex-row">
-        <section class="side col">
-            <aside>
-                <h5>
-                    <button type="button" class=" side_button btn btn-primary" data-toggle="modal"
-                        data-target="#exampleModal"> Saved Section</button>
-                </h5>
-
-                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">How to use this feature!</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p> Click on any header and a button will save here for you to click and jump back to
-                                    that same section.</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-        </section>
-
-        <section class="cards col-11">
-
-
-
-            <div class="card three">
-                <div class="card-body">
-                    <h5 class="card-title"></h5>
-                    <img src="assets/images/title.smaller.png">
-                    <p class="card-text">On this page we will go through the steps of getting and using data from an
-                        API. It explains and shows the coding process.</p>
-                    <!--Needs screenshot-->
-                   
-                    <p class="card-text">First if the website that your using needs a API key, you need to get that first because API keys are used for 
-                        authentication purposes. </p>
-                       
-                    <!--Screenshot-->
-                    <!--Quiz question here-->
-                    <p class="card-text">Next you need to go the sites documentation page and see how to utilize the URL,
-                        and if they have API Key see how they the in their URL. </p>
-                        <img src="assets/images/brewery documentation.PNG">
-
-
-                    <p class="card-text">Open up your javascript and create a variable that will hold your API Key (if needed).</p>
-                    <code>
-                        var APIKEY = {APIKEY}
-                    </code>
-                    <!--Quiz question-->
-                    <p class="card-text">Next you will need to make two more variables, one variable to contain and hold your and display your data on your html page, 
-                        and the other variable to hold your URL link so that you can fetch it in the next step.</p>
-                        <code>
-                            var fetchURL = 'https://api.openbrewerydb.org/breweries?by_city=san_diego'
-                            var BreweryContainer = document.getElementById
-                        </code>
-                    <!--Screenshot here-->
-                    <p class="clas-text">Now that you have that you need to make a fetch function with the variable URL
-                        in the parameter.</p>
-                        <code>
-                            fetch(requestUrl)
-                        </code>
-                    <!--Screenshot here-->
-                    <p class="class-text">Next you will create a promise which will be called (.then) and in that
-                        promise you will make another function with response in that parameter, next to the parameter
-                        you're going to create {}.</p>
-                        <code>
-                            .then(function (response) {
-                        </code>
-                    <!--Screenshot here-->
-                    <p class="class-text">Inside the {} your are going to make the response return as a .json so it can
-                        easily manipulate the data as an array.</p>
-                        <code>
-                            return response.json();
-                        </code>
-                    <!--3 screenshots here-->
-                    <p class="class-text">Now you need to make another promise .then next to the new function with data
-                        in the parameter,
-                        if you want to see if the data went through you can console.log the data and you can look in the
-                        console on you html page.
-                    </p>
-                    <code>
-                        then(function (data){
-                            console.log(data);
-                    </code>
-                    <!--Screenshot of the for loop -->
-                    <p class="class-text">Now that you have the data you will need to make a for loop with the data. </p>
-                    <code>
-                        for (var i = 0; i < data.length; i++)
-                    </code>
-                    <!--Screenshot-->
-                    <p class="class-text">Now that you have the data you will want to push the data to the page you want
-                        to create two new variables and and element that equal to each other.</p>
-                        <code>
-                        var city = document.createElement('h3');
-                        var names = document.createElement('p');
-                        </code>
-                    <!--screenshot-->
-                    <p class="class-text">After you done that you can use the data with the increment and the data type
-                        you want to use.</p>
-                        <code>
-                            city.textContent = data[i].city;
-                            names.textContent = data[i].name;
-                        </code>
-                    <!--screenshot-->
-                    <p class="class-text">Now you can append the new variables to your html page.</p>
-                    <code>
-                        BreweriesContainer.append(city);
-                        BreweriesContainer.append(name);
-                    
-                    </code>
-                </div>
-
-                <div class="card quiz" style="width: 18rem;">
-                    <div class="card-body">
-                      <h5 class="card-title">API Quiz</h5>
-                      <p class=" question card-text">Some quick questions to test your knowledge!</p>
-                    </div>
-                    <ul class="list-group list-group-flush" style="display: none;">
-                      <li class="list-group-item"> <button class="answer"> answer</button> </li>
-                      <li class="list-group-item"> <button class="answer"> answer</button> </li>
-                      <li class="list-group-item"> <button class="answer"> answer</button> </li>
-                      <li class="list-group-item"> <button class="answer"> answer</button> </li>
-                    </ul>
-                    <div>
-                        <button class="start-button"> Start</button>
-                    </div>
-                    <div class="card-body">
-                        <p id="indicator" style="display: none;"></p>
-                    </div>
-                </div>
+    <main class="container">
+      <section class="cards">
+        <div class="card three">
+          <div class="card-body">
+            <h5 class="card-title">Tutorial</h5>
+            <p class="card-text">
+              On this page we will go through the steps of getting and using
+              data from an API. We will explain and show the coding process.
+            </p>
+            <p class="card-text">
+              First, read the documentation to determine if the website you're
+              using needs a API key. If so, obtain a key first because you will
+              need it for authentication purposes.
+            </p>
+            <p class="card-text">
+              Next, go back to the site's documentation page and find the URL
+              for making API requests.
+            </p>
+            <div class="docImg rounded mx-auto p-3 m-3">
+              <img
+                src="assets/images/brewerydocumentation.png"
+                class="rounded img-fluid mx-auto d-block"
+              />
             </div>
-            
-                
+            <p class="card-text">
+              Now, we will open our JavaScript file and create a variable to
+              hold our API Key (if needed) and log the variable to the console
+              to make sure it assigns correctly.
+            </p>
+            <div class="bg-dark rounded">
+              <pre>
+                    <code class='text-success text-monospace'>
+    //assign the API key to a variable and log it to the console
+        var apiKey = 'insert_your_api_key_here';
+        console.log(apiKey);
+                            </code></pre>
+            </div>
+            <p class="card-text">
+              After that, we will make two more variables: one to select the
+              element where we want to insert the data, and the other to hold
+              the URL to use in the fetch() method.
+            </p>
+            <div class="bg-dark rounded">
+              <pre>
+                    <code class='text-success text-monospace'>
+    //assign the URL to a variable for use in the API call and select the container used to display the data
+        var apiUrl = 'https://api.openbrewerydb.org/breweries?by_city=san_diego'
+        var breweryContainer = document.getElementById('breweryContainer');
+                    </code></pre>
+            </div>
 
-        </section>
+            <p class="card-text">
+              The next step is to use the fetch() method to retrieve information
+              from the API. To use the fetch() method, we insert the API URL
+              into the parentheses and append .then (referred to as a
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise"
+                alt="link to promise documentation"
+                >promise</a
+              >) with a function inside to handle the response. Inside that
+              function, we will convert the response into a JSON object and
+              return it so we can manipulate the data.
+            </p>
+            <div class="bg-dark rounded">
+              <pre>
+                    <code class='text-success text-monospace'>
+    //fetch the data from the API and convert the response to JSON
+        fetch(apiUrl)
+            .then(function (response) {
+                return response.json();
+            })
+                    </code></pre>
+            </div>
 
+            <p class="class-text">
+              In order to get the data into an array, we will append another
+              .then promise containing a function with (data) as the parameter.
+            </p>
+            <div class="bg-dark rounded">
+              <pre>
+                    <code class='text-success text-monospace'>
+    //fetch the data from the API
+        fetch(apiUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
 
+            });
+                    </code></pre>
+            </div>
+
+            <p class="class-text">
+              Inside the {} of that function we will see if our API call was
+              successful by console logging the data array.
+            </p>
+            <div class="bg-dark rounded">
+              <pre>
+                    <code class='text-success text-monospace'>
+    //fetch the data from the API
+        fetch(apiUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                console.log(data);
+            });
+                    </code></pre>
+            </div>
+            <p class="class-text">
+              Let's make a for loop and create some elements to display the
+              items in the array on the page. We will create an unordered list
+              with links to the first 5 breweries contained in the data array.
+            </p>
+            <div class="bg-dark rounded">
+              <pre>
+                    <code class='text-success text-monospace'>
+    //fetch the data from the API
+        fetch(apiUrl)
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                for (var i = 0; i < 5; i++) {
+                    var breweryName = data[i].name;
+                    var breweryUrl = data[i].website_url;
+                    var newLi = document.createElement('li');
+                    newLi.innerHTML += ("&lta href='" + breweryUrl + "'&gt" + breweryName + "&lt/a&gt");
+                    breweryContainer.append(newLi);
+                }
+            });
+                    </code></pre>
+            </div>
+            <p class="card-text">Click the button below to see the code run!</p>
+            <div class="hide5 rounded">
+              <ul class="list-group w-50" id="breweryContainer"></ul>
+            </div>
+            <button class="show-btn5 my-3 btn btn-info">See results!</button>
+            <p>
+              Test your knowledge by taking the quiz below! Once you're
+              finished, check out the <a href="./demo.html">Demo</a> page.
+            </p>
+          </div>
+
+          <div class="rounded mx-auto bg-dark p-3 m-3 w-75">
+            <div class="card quiz mx-auto">
+              <div class="card-body">
+                <h5 class="card-title">API Quiz</h5>
+                <p class="question card-text">
+                  Some quick questions to test your knowledge!
+                </p>
+              </div>
+              <ul class="list-group list-group-flush" style="display: none">
+                <li class="list-group-item">
+                  <button class="answer">answer</button>
+                </li>
+                <li class="list-group-item">
+                  <button class="answer">answer</button>
+                </li>
+                <li class="list-group-item">
+                  <button class="answer">answer</button>
+                </li>
+                <li class="list-group-item">
+                  <button class="answer">answer</button>
+                </li>
+              </ul>
+              <div>
+                <button class="start-button">Start</button>
+              </div>
+              <div class="card-body">
+                <p id="indicator" style="display: none"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<script src="./assets/js/index.js"></script>
-<script src="./assets/js/index_tutorial.js"></script>
-
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="./assets/js/index.js"></script>
 </html>
