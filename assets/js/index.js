@@ -14,6 +14,7 @@ var ansButtons = $(".list-group");
 var quesHolder = $(".question");
 var answers = $(".answer");
 var indicator = $("#indicator");
+var score = 0;
 
 //Quiz object
 var quiz = {
@@ -84,8 +85,10 @@ var quizRunner = function () {
 //function for end of quiz
 var quizOver = function () {
   $(quesHolder).text(
-    "Quiz Over! Press Start Button to go through questions again."
-  );
+    "Quiz Over! Press Start Button to go through questions again. Your score was " + score);
+
+    localStorage.setItem(".question", score)
+  
 
   //remove ans button
   $(ansButtons).css("display", "none");
@@ -96,6 +99,7 @@ var quizOver = function () {
   //reset variables
   x = 0;
   i = 0;
+  score = 0;
 
   //reset indicator buttons
   $(indicator).css("display", "none");
@@ -111,6 +115,7 @@ ansButtons.on("click", function (event) {
   if (quiz.correctAns[i - 1] == ans) {
     $(indicator).css("display", "initial");
     $(indicator).text("Correct");
+    score++;
   } else {
     $(indicator).css("display", "initial");
     $(indicator).text("Wrong");
