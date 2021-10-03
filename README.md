@@ -1,5 +1,5 @@
 # Server Side Station (S3)
-Welcome to Server Side Station or S3, a site that provides additional insight on how server sideAPIs work.  We focus on documentation, acquiring authentication keys and miscellaneous data using the FETCH method, and how to manipulate the data received to be used by the user as they see fit.  We provide a tutorial and demo for better understanding.
+Welcome to Server Side Station or S3, a site that provides additional insight on how server side APIs work.  We focus on documentation, acquiring authentication keys and miscellaneous data using the FETCH method, and how to manipulate the data received to be used by the user as they see fit.  We provide a tutorial and demo for better understanding.
 
 ## User Story
 ```
